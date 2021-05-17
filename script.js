@@ -133,11 +133,13 @@ var generatePassword = function () {
   }
 
   for (i = 0; i <= passLength; i++) {
-    var newPass = randomArray[Math.floor(Math.random() * randomArray.length - 1)];
-  };
-  
+    var newPass =
+      randomArray[Math.floor(Math.random() * randomArray.length - 1)];
+  }
+
   newArray.push(newPass);
-  return(newArray);
+  newArray = newArray.join('');
+  return newArray;
 };
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
